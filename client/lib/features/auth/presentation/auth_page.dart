@@ -6,8 +6,8 @@ class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
 
   void _selectRole(BuildContext context, String role) {
-    // No auth logic; navigate to onboarding
-    Navigator.pushNamed(context, AppRoutes.onboarding);
+    // No auth logic; navigate to onboarding and pass selected role
+    Navigator.pushNamed(context, AppRoutes.onboarding, arguments: {'role': role});
   }
 
   @override
