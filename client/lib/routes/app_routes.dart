@@ -15,11 +15,13 @@ class AppRoutes {
   static const String booking = '/booking';
 
   static Map<String, WidgetBuilder> get routes => {
-        onboarding: (_) => const OnboardingPage(),
-        login: (_) => const AuthPage(),
-        home: (_) => const HomePage(),
-        profile: (_) => const ProfilesPage(),
-        swipe: (_) => const SwipePage(),
-        booking: (_) => const BookingPage(),
+      onboarding: (_) => const OnboardingPage(),
+      login: (_) => const AuthPage(),
+      home: (_) => const HomePage(),
+      profile: (_) => const ProfilesPage(),
+      '${profile}/owner': (_) => const OwnerProfileView(),
+      '${profile}/provider': (_) => const ProviderProfileView(),
+      swipe: (_) => const SwipePage(),
+      booking: (_) => const BookingPage(),
       };
 }
